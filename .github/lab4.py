@@ -29,12 +29,17 @@ if plan.lower() == "green":
     if data > 2:
         coupon = input("Do you have coupon for the Green plan(yes or no)?")
         bill = 64.98 * months
+        if coupon.lower() == "yes" and bill >= 75:
+            bill -= 20
+            print("Your bill after ", months, "months with a coupon is $%.2f" % bill, ".")
+        else:
+            print("Your bill after ", months, "months is $%.2f" % bill, ".")
     elif 0 < data <= 2:
         coupon = input("Do you have coupon for the Green plan(yes or no)?")
         bill = 49.99 * months
         if coupon.lower() == "yes" and bill >= 75:
             bill -= 20
-            print("Your bill after ", months, " with a coupon is $%.2f" % bill, ".")
+            print("Your bill after ", months, "months with a coupon is $%.2f" % bill, ".")
         else:
             print("Your bill after ", months, "months is $%.2f" % bill, ".")
 elif plan.lower() == "orange":
