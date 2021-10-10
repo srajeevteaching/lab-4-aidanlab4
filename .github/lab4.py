@@ -20,7 +20,6 @@
 # surrounding it; i.e. " gREEn " should be recognized as valid. If the user inputs an invalid package name, tell them
 # that it was invalid and do not give them a bill amount or do any calculations. Do not accept negative numbers
 # for extra data used.
-
 # input for plan
 plan = input("What is your plan?")
 # if chain
